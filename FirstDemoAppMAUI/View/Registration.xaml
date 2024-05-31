@@ -12,7 +12,7 @@
         <LayoutOptions x:Key="vertOptions"
                        Alignment="Center" />
         <x:Double x:Key="rotationAngle">0</x:Double>
-        <x:Double x:Key="fontSize">24</x:Double>
+        <x:Double x:Key="fontSize">18</x:Double>
         <OnPlatform x:Key="textColor"
                     x:TypeArguments="Color">
             <On Platform="iOS" Value="Red" />
@@ -22,12 +22,24 @@
     </ContentPage.Resources>
     
     <VerticalStackLayout>
-        <Label VerticalOptions="{StaticResource horzOptions}"
-                Text="Welcome to .NET MAUI!" 
-                Rotation="{StaticResource rotationAngle}"
-                TextColor="{StaticResource textColor}" 
-                BackgroundColor="{x:Static local:AppConstants.ForegroundColor}"
-                FontSize="{StaticResource fontSize}" Padding="10" />
-        <Button Text="Hi" Clicked="Button_Clicked"  Margin="10"></Button>
+            <Entry VerticalOptions="{StaticResource horzOptions}"  AutomationId="txtfirstname" Placeholder="Please Enter First Name" PlaceholderColor="BlueViolet"
+         FontSize="{StaticResource fontSize}" Margin="10"></Entry>
+        <Entry VerticalOptions="{StaticResource horzOptions}" AutomationId="txtlatname"  Placeholder="Please Enter Last Name" PlaceholderColor="BlueViolet"
+          FontSize="{StaticResource fontSize}" Margin="10"></Entry>
+
+        <Button
+                x:Name="ImageSelect"
+                Text="Select Image"
+                SemanticProperties.Hint="Select Image" ImageSource="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/douc.jpg"
+                Clicked="SelectBarcode"
+                HorizontalOptions="Start" Margin="10" />
+        <Label x:Name="outputText"
+                   Padding="10"/>
+        <!--<Image
+                x:Name="barcodeImage"
+                SemanticProperties.Description="Selected Barcode"
+                HeightRequest="200"
+                HorizontalOptions="Start" />-->
+        <Button Text="Save" Clicked="Button_Clicked"  Margin="10"></Button>
     </VerticalStackLayout>
 </ContentPage>
