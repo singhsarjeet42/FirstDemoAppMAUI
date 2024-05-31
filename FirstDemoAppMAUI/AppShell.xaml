@@ -21,16 +21,16 @@
     </Shell.Resources>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="User"
-             Icon="paw.png">
+               Icon="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/baboon.jpg" >
             <ShellContent Title="Form"
                           Icon="dotnet_bot.png"  ContentTemplate="{DataTemplate view:Registration}"
                            />
             <ShellContent Title="List"
-                          Icon="dotnet_bot.png"  ContentTemplate="{DataTemplate local:MainPage}"
+                          Icon="dotnet_bot.png"  ContentTemplate="{DataTemplate view:List}"
                          />
         </Tab>
         <ShellContent Title="Description"
-                      Icon="monkey.png"  ContentTemplate="{DataTemplate local:MainPage}"
+                      Icon="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/capuchin.jpg"  ContentTemplate="{DataTemplate local:MainPage}"
                       />
     </FlyoutItem>
 
